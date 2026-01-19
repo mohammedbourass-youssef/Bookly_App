@@ -1,3 +1,4 @@
+import 'package:bookly_app/Features/Home/Presentation/Widgets/HomePageBody.dart';
 import 'package:flutter/material.dart';
 
 class HomepageView extends StatefulWidget {
@@ -10,6 +11,6 @@ class HomepageView extends StatefulWidget {
 class _HomepageViewState extends State<HomepageView> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold();
+    return const Homepagebody();
   }
 }
