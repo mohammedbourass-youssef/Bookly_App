@@ -13,6 +13,7 @@ class RatingWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Icon(Icons.star, color: Colors.amber, size: ratingSize),
         SizedBox(width: 5),

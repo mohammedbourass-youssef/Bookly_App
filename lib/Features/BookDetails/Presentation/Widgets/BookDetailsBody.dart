@@ -1,5 +1,6 @@
 import 'package:bookly_app/Core/Utils/Widgets/RatingWidget.dart';
 import 'package:bookly_app/Features/BookDetails/Presentation/Widgets/ActionsSection.dart';
+import 'package:bookly_app/Features/BookDetails/Presentation/Widgets/SimilarListView.dart';
 import 'package:bookly_app/Features/Home/Presentation/Widgets/CustomBookItemListView.dart';
 import 'package:flutter/material.dart';
 
@@ -28,8 +29,33 @@ class Bookdetailsbody extends StatelessWidget {
           ),
         ),
         SizedBox(height: 10),
-        Center(child: RatingWidget(ratingSize: 30 , peopleCount: '2000', ratingValue: '4.5')),
+        Center(
+          child: RatingWidget(
+            ratingSize: 30,
+            peopleCount: '2000',
+            ratingValue: '4.5',
+          ),
+        ),
+        SizedBox(height: 10),
         ActionsSection(),
+        SizedBox(height: 20),
+        Padding(
+          padding: const EdgeInsets.only(left: 18),
+          child: SizedBox(
+            width: double.infinity,
+            child: Text(
+              'you can also like',
+              style: TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.w600,
+                color: Colors.white,
+              ),
+              textAlign: TextAlign.start,
+            ),
+          ),
+        ),
+        SizedBox(height: 10),
+        Similarlistview(),
       ],
     );
   }
