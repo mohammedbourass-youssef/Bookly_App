@@ -13,23 +13,34 @@ class Bookserviceimpl implements IBookRepo {
   Future<Either<Fealure, BookModel>> fetchFeaturedBooks() async {
     try {
       var response =await  _httphelper.get('?q=subject:fiction&orderBy=newest');
-        var books = response.data!;
+        var books = BookModel.fromMap(response.data!);
         return Right(books);
     } catch (e) {
       if(e is DioException){
         return Left(ServerFealure.fromDioError(e));
       }
       else {
-        return Left(ServerFealure('Unexpected Error Try again'));
+        return Left(ServerFealure('Unexpected Error Try again ${e.toString()}'));
       }
       
     }
   }
   
   @override
-  Future<Either<Fealure, BookModel>> fetchMostRelevantBooks() {
-    // TODO: implement fetchMostRelevantBooks
-    throw UnimplementedError();
+  Future<Either<Fealure, BookModel>> fetchMostRelevantBooks() async {
+    try {
+      var response =await  _httphelper.get('?q=programming&orderBy=relevance');
+        var books = BookModel.fromMap(response.data!);
+        return Right(books);
+    } catch (e) {
+      if(e is DioException){
+        return Left(ServerFealure.fromDioError(e));
+      }
+      else {
+        return Left(ServerFealure('Unexpected Error Try again ${e.toString()}'));
+      }
+      
+    }
   }
   
   @override

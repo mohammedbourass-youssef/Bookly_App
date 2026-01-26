@@ -10,7 +10,7 @@ class FeatureBookCubit extends Cubit<FeatureBookState> {
   final Bookserviceimpl bookserviceimpl;
 
   FeatureBookCubit({required this.bookserviceimpl})
-    : super(FeatureBookInitial());
+    : super(FeatureBookInitiale());
 
   Future<void> fetchFeaturedBooks() async {
     emit(FeatureBookLoading());

@@ -1,7 +1,6 @@
 import 'package:bookly_app/Core/Utils/Widgets/RatingWidget.dart';
 import 'package:bookly_app/Features/BookDetails/Presentation/Widgets/ActionsSection.dart';
 import 'package:bookly_app/Features/BookDetails/Presentation/Widgets/SimilarListView.dart';
-import 'package:bookly_app/Features/Home/Presentation/Widgets/CustomBookItemListView.dart';
 import 'package:flutter/material.dart';
 
 class Bookdetailsbody extends StatelessWidget {
@@ -16,7 +15,7 @@ class Bookdetailsbody extends StatelessWidget {
         Center(
           child: SizedBox(
             height: MediaQuery.of(context).size.height * 0.35,
-            child: CustomBookItemListView(),
+            // child: CustomBookItemListView(isLoading: true),
           ),
         ),
         SizedBox(height: 20),

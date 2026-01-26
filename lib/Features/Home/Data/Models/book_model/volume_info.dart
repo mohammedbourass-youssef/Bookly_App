@@ -9,7 +9,7 @@ import 'reading_modes.dart';
 
 class VolumeInfo {
 	String? title;
-	List<String>? authors;
+	List<dynamic>? authors;
 	String? publisher;
 	String? publishedDate;
 	String? description;
@@ -17,7 +17,7 @@ class VolumeInfo {
 	ReadingModes? readingModes;
 	int? pageCount;
 	String? printType;
-	List<String>? categories;
+	List<dynamic>? categories;
 	String? maturityRating;
 	bool? allowAnonLogging;
 	String? contentVersion;
@@ -57,7 +57,7 @@ class VolumeInfo {
 
 	factory VolumeInfo.fromMap(Map<String, dynamic> data) => VolumeInfo(
 				title: data['title'] as String?,
-				authors: data['authors'] as List<String>?,
+				authors: data['authors'] as List<dynamic>?,
 				publisher: data['publisher'] as String?,
 				publishedDate: data['publishedDate'] as String?,
 				description: data['description'] as String?,
@@ -69,7 +69,7 @@ class VolumeInfo {
 						: ReadingModes.fromMap(data['readingModes'] as Map<String, dynamic>),
 				pageCount: data['pageCount'] as int?,
 				printType: data['printType'] as String?,
-				categories: data['categories'] as List<String>?,
+				categories: data['categories'] as List<dynamic>?,
 				maturityRating: data['maturityRating'] as String?,
 				allowAnonLogging: data['allowAnonLogging'] as bool?,
 				contentVersion: data['contentVersion'] as String?,

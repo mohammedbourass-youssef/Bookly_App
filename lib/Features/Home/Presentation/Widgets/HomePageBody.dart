@@ -29,10 +29,9 @@ class Homepagebody extends StatelessWidget {
             ),
           ),
           SliverFillRemaining(child: MostRelevantBooks()),
-          SliverToBoxAdapter(child: SizedBox(height: 20)),
+          SliverToBoxAdapter(child: SizedBox(height: 50)),
         ],
       ),
     );
   }
 }
-
